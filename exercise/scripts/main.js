@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // - #green
   // - #orange
   // - #red
-  var deckElement = document.querySelector('.Cards');
+  var deckElement = document.querySelector('.cards'); //updated capital letter C
   var deckColor = window.location.hash;
 
   if (deckElement && deckColor) {
