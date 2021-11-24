@@ -34,16 +34,18 @@ window.addEventListener('DOMContentLoaded', function() {
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
         setTimeout(function(){ //added some timeOut to allow the cards to be reset and flip
-        card1.classList.remove('is-selected');
-        card2.classList.remove('is-selected'); //updated variable card3 to card2
-        selectedCards = []; },
+          card1.classList.remove('is-selected');
+          card2.classList.remove('is-selected'); //updated variable card3 to card2
+          selectedCards = []; },
         300);
       }
 
       // If we've matched all the cards, display a message.
-      if (matchedCards.length === cards.length) { //Updated operation for condition to match matchedCards length and total no. of cards
-        alert('You matched all the cards, nice job!');
-      }
+      setTimeout(function(){ //added some timeOut to allow the last card to flip
+        if (matchedCards.length === cards.length) { //Updated operation for condition to match matchedCards length and total no. of cards
+          alert('You matched all the cards, nice job!');
+        }},
+      300);
     });
   });
 
