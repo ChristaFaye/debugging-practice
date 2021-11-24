@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // - #orange
   // - #red
   var deckElement = document.querySelector('.cards'); //updated capital letter C
-  var deckColor = window.location.hash;
+  var deckColor = window.location.hash.substring(1); //added substring method to extract word on the next index after the hash
 
   if (deckElement && deckColor) {
     var className = 'cards--' + deckColor;
