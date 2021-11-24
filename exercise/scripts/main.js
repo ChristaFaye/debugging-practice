@@ -33,9 +33,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
+        setTimeout(function(){ //added some timeOut to allow the cards to be reset and flip
         card1.classList.remove('is-selected');
         card2.classList.remove('is-selected'); //updated variable card3 to card2
-        selectedCards = [];
+        selectedCards = []; },
+        300);
       }
 
       // If we've matched all the cards, display a message.
